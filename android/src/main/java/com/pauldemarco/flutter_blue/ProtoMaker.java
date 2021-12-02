@@ -68,7 +68,9 @@ public class ProtoMaker {
             }
             // Manufacturer Specific Data
             SparseArray<byte[]> msd = scanRecord.getManufacturerSpecificData();
+            System.out.println("Added msd check null 1");
             if (msd != null) {
+                System.out.println("Added msd check null 2");
                 for (int i = 0; i < msd.size(); i++) {
                     int key = msd.keyAt(i);
                     byte[] value = msd.valueAt(i);
